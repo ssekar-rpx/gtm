@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  host: localhost
+  username: postgres
+  password:
+
+development:
+  <<: *default
+  database: gtm_dev
+
+test:
+  <<: *default
+  database: gtm_test
+
+production:
+  <<: *default
+  database: gtm_prod
